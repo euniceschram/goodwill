@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodwill Ads Agency | Professional Google Ads Management & Support</title>
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #e67e22;
+            --accent: #c0392b;
+            --danger: #c0392b;
+            --light: #F8F9FA;
+            --dark: #202124;
+            --gray: #5F6368;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), #222222);
+            color: white;
+            padding: 1rem 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .contact-btn {
+            background-color: white;
+            color: var(--primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .hero {
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-btn {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0 0.5rem;
+        }
+        
+        .cta-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .cta-btn.outline {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+        
+        .cta-btn.outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+        
+        .services {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .service-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 2rem;
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card .icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefits {
+            padding: 5rem 0;
+        }
+        
+        .benefits-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .benefits-content {
+            flex: 1;
+        }
+        
+        .benefits-content h2 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .benefits-list {
+            list-style: none;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .benefits-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .benefits-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .testimonials {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+        
+        .testimonial-cards {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .pricing {
+            padding: 5rem 0;
+        }
+        
+        .pricing-cards {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 2rem;
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--secondary);
+            position: relative;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .pricing-card h3 {
+            color: var(--secondary);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .price {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--dark);
+        }
+        
+        .price-period {
+            color: var(--gray);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-features li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-features li:before {
+            content: "✓";
+            color: var(--secondary);
+            margin-right: 0.5rem;
+        }
+        
+        .contact {
+            padding: 5rem 0;
+            background-color: #222222;
+            color: white;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .contact-content {
+            flex: 1;
+        }
+        
+        .contact-content h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info div {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info div i {
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--secondary);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            margin-bottom: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .benefits-container {
+                flex-direction: column;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .cta-btn {
+                display: block;
+                margin: 1rem auto;
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="nav">
+                <div class="logo">Goodwill <span>Ads</span> Agency</div>
+                <a href="#contact" class="contact-btn">Contact Us</a>
+            </div>
+            <div class="hero">
+                <h1>Professional Google Ads Management & Support</h1>
+                <p>Maximize your ROI with our expert Google Ads services. We help businesses of all sizes optimize their campaigns for better performance and higher conversions.</p>
+                <div class="cta-buttons">
+                    <a href="#services" class="cta-btn">Our Services</a>
+                    <a href="#contact" class="cta-btn outline">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Google Ads Services</h2>
+                <p>We offer comprehensive solutions to help you succeed with Google Ads</p>
+            </div>
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="icon">📊</div>
+                    <h3>Google Ads Management</h3>
+                    <p>Full-service management of your Google Ads campaigns including keyword research, ad creation, bid optimization, and performance tracking.</p>
+                    <a href="#contact" class="cta-btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🔍</div>
+                    <h3>Account Setup & Optimization</h3>
+                    <p>Professional setup of new Google Ads accounts or optimization of existing ones to ensure proper tracking, targeting, and campaign structure.</p>
+                    <a href="#contact" class="cta-btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">📈</div>
+                    <h3>Performance Analysis</h3>
+                    <p>Detailed analysis of your campaigns with actionable insights and recommendations to improve performance and maximize your ad spend.</p>
+                    <a href="#contact" class="cta-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-container">
+                <div class="benefits-content">
+                    <h2>Why Choose Our Google Ads Services?</h2>
+                    <ul class="benefits-list">
+                        <li>Certified Google Ads Specialists with years of experience</li>
+                        <li>Customized strategies tailored to your business goals</li>
+                        <li>Transparent reporting and regular performance updates</li>
+                        <li>Continuous optimization to maximize your ROI</li>
+                        <li>Dedicated account manager for personalized support</li>
+                        <li>No long-term contracts - flexible month-to-month options</li>
+                    </ul>
+                </div>
+                <div class="benefits-image">
+                    <img src="jp.png" alt="Google Ads Dashboard" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Don't just take our word for it - hear from businesses we've helped</p>
+            </div>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Their Google Ads management has transformed our online presence. We've seen a 43% increase in qualified leads and significantly reduced our cost per acquisition."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>John Doe</h4>
+                            <p>Marketing Director, Tech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "The team is incredibly responsive and knowledgeable. They revamped our Google Ads account structure and our conversion rate improved by 35% in just two months."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SL</div>
+                        <div class="author-info">
+                            <h4>Sarah Lee</h4>
+                            <p>Owner, Boutique Retail</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "As a small business, every dollar counts. Their Google Ads optimization has given us an excellent return on our investment and helped us compete with larger companies."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div class="author-info">
+                            <h4>Mike Johnson</h4>
+                            <p>CEO, Local Services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simple & Transparent Pricing</h2>
+                <p>Choose the plan that fits your business needs</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">
+                        <span class="price-amount">$499</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Account setup & optimization</li>
+                        <li>Up to 2 campaigns</li>
+                        <li>Keyword research</li>
+                        <li>Ad creation & testing</li>
+                        <li>Basic performance reporting</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#contact" class="cta-btn">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Professional</h3>
+                    <div class="price">
+                        <span class="price-amount">$899</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Everything in Starter</li>
+                        <li>Up to 5 campaigns</li>
+                        <li>Advanced audience targeting</li>
+                        <li>Conversion tracking setup</li>
+                        <li>Landing page recommendations</li>
+                        <li>Bi-weekly performance calls</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#contact" class="cta-btn">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">
+                        <span class="price-amount">$1499</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Everything in Professional</li>
+                        <li>Unlimited campaigns</li>
+                        <li>Competitor analysis</li>
+                        <li>Custom reporting dashboard</li>
+                        <li>Cross-channel strategy</li>
+                        <li>Weekly strategy calls</li>
+                        <li>24/7 dedicated support</li>
+                    </ul>
+                    <a href="#contact" class="cta-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-content">
+                    <h2>Get in Touch</h2>
+                    <p>Ready to improve your Google Ads performance? Contact us today for a free consultation.</p>
+                    <div class="contact-info">
+                        <div>
+                            <i>📱</i>
+                            <span>WhatsApp: +212-656-315747</span>
+                        </div>
+                        <div>
+                            <i>💬</i>
+                            <span>Telegram: @kaazbr</span>
+                        </div>
+                        <div>
+                            <i>📍</i>
+                            <span>Address: Kowloon City, Hong Kong</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" placeholder="Tell us about your Google Ads needs"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Professional Google Ads Management & Support Services</p>
+                <div class="social-links">
+                    <a href="#">📱 WhatsApp</a>
+                    <a href="#">💬 Telegram</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Goodwill Ads Agency. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
